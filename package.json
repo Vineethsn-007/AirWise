@@ -1,0 +1,51 @@
+{
+  "name": "airwise",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GenAI-powered urban air quality assistant with deterministic, published-table health and impact calculations.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:a11y": "vitest run tests/a11y",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.50.0",
+    "@testing-library/jest-dom": "^6.6.0",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "autoprefixer": "^10.4.20",
+    "axe-core": "^4.10.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.5.0",
+    "eslint-config-prettier": "^9.1.0",
+    "jsdom": "^25.0.0",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

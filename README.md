@@ -82,6 +82,8 @@ npm run test:coverage # v8 coverage summary
 npm run test:e2e      # Playwright flow + axe-core scans (starts dev server)
 ```
 
+Playwright is pinned to `1.65.0` (Chromium revision `1254`) with a `playwright-core` override so the E2E suite runs with a locally cached browser; newer 1.65.x downloads were hitting CDN connection resets. Current run: **4 passed, 1 skipped** — the real-LLM routine test skips until `OPENROUTER_API_KEY` is set.
+
 Coverage (`npm run test:coverage`): **90.02% statements**, 74.35% branches, 87.93% functions across `lib/**`. The highest-value files are fully covered: EPA breakpoints 97.9%, emissions 100%, health mapping 100%, all prompt builders 100%, validation schemas 100%.
 
 - `tests/unit` — AQI boundaries, pollutant sub-index interpolation, emissions arithmetic, forecast ranking, prompt builders, numeric-claim guard.

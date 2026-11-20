@@ -78,7 +78,7 @@ export function LocationSearch() {
           type="button"
           onClick={locate}
           disabled={busy}
-          aria-label="Use my current location"
+          aria-label="Use my location"
           className={`${SURFACE.capsule} border border-sky-mid/40 bg-white text-sky-deep hover:bg-sky-mist disabled:opacity-60 ${SURFACE.focusRing}`}
         >
           <span aria-hidden="true">⌖</span> Use my location

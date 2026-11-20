@@ -6,7 +6,12 @@ export function ForecastStrip({ hours, horizon = 24 }: { hours: HourlyAqi[]; hor
   if (visible.length === 0) return <p>No forecast available.</p>;
   return (
     <div>
-      <div className="flex gap-2 overflow-x-auto pb-3" role="list" aria-label="Hourly air quality forecast">
+      <div
+        className="flex gap-2 overflow-x-auto pb-3"
+        role="list"
+        aria-label="Hourly air quality forecast"
+        tabIndex={0}
+      >
         {visible.map((hour) => {
           const token = SEVERITY_TOKENS[hour.category.id];
           const height = Math.max(12, Math.min(72, Math.round((hour.aqi / 200) * 72)));
